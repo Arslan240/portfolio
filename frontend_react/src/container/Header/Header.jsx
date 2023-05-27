@@ -17,7 +17,7 @@ const skills = [images.flutter,images.redux,images.sass]
 
 const Header = () => {
   return (
-    <div id='home' className='app__header app__flex'>
+    <div className='app__header app__flex'>
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
@@ -39,19 +39,20 @@ const Header = () => {
           </div>
         </div>
       </motion.div>
+
       <motion.div
         whileInView={{opacity:[0,1]}}
         transition={{duration:0.5, delayChildren:0.5}}
-        className='app__header-img'
+        className='app__header-img-container'
       >
-        <img src={images.profile} alt="profile_bg" />
         <motion.img
           whileInView={{scale:[0,1]}}
           transition={{duration:0.5, ease: 'easeInOut'}}
           src={images.circle}
-          alt='profil_circle'
+          alt='profile_circle'
           className='overlay_circle'
         />
+        <img src={images.profile} alt="profile_bg" className='app__header-img'/>
       
       </motion.div>
       
@@ -60,13 +61,13 @@ const Header = () => {
         whileInView={scaleVariants.whileInView}
         className='app__header-circles'
       >
-        {
+        {/* {
           skills.map((circle, index) => (
             <div className='circle-smp app__flex' key={`circle-${index}`}>
               <img src={circle} alt="circle" />
             </div>
           ))
-        }
+        } */}
       </motion.div>
     </div>
   )

@@ -12,6 +12,17 @@
     flex-wrap: wrap-reverse;
     margin: 4rem 2rem 2rem;
 
+    a{
+        text-decoration: none;
+        font-weight: 500;
+
+        &:hover{
+            a {
+                color: red;
+            }
+        }
+    }
+
     .app__footer-card {
         min-width: 290px;
         display: flex;
@@ -27,10 +38,6 @@
 
         transition: all 0.3s ease-in-out;
 
-        // .p-test {
-        //     text-decoration: none;
-        // }
-
         img {
             width: 40px;
             height: 40px;
@@ -39,14 +46,6 @@
 
         p {
             font-weight: 600;
-        }
-
-        a {
-            // text-decoration: none;
-            font-weight: 500;
-            &:hover{
-                color: red;
-            }
         }
 
         &:hover {
@@ -58,9 +57,9 @@
         }
     }
 
-    // @media screen and (max-width:768px) {
-    //     width: 100%;
-    // }
+    @media screen and (max-width:768px) {
+        width: 100%;
+    }
 }
 
 .app__footer-cards .app__footer-card:last-child {

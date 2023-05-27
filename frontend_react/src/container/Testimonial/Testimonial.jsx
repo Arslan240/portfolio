@@ -62,7 +62,6 @@ const Testimonial = () => {
             transition={{ duration: 0.5, type: 'tween' }}
             key={brand._id}
           >
-            {console.log(brand)}
             <img src={urlFor(brand.imgUrl).url()} alt={brand.name} />
           </motion.div>
         ))}
